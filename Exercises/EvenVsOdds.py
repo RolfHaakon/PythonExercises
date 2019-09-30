@@ -38,22 +38,18 @@ available_spots([4, 4], 8) ➞ 1
 def available_spots(lst, num):
     ls = 0
     if num % 2 == 0:
-        for i in range(len(lst)-1):
-            if lst[i] % 2 != 1 and lst[i+1] % 2 != 1:
+        for i in range(len(lst) - 1):
+            if lst[i] % 2 != 1 and lst[i + 1] % 2 != 1:
                 ls += 1
         return ls
     else:
-        for i in range(len(lst)-1):
+        for i in range(len(lst) - 1):
             if lst[i] % 2 != 0 and lst[i + 1] % 2 != 0:
                 ls += 1
         return ls
-
-
 
 
 print(available_spots([4, 3, 2, 6], 8))
 print(available_spots([0, 4, 6, 8], 9))
 print(available_spots([0, 4, 6, 8], 12))
 print(available_spots([4, 4, 4, 4, 5], 7))
-
-
